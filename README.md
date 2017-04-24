@@ -2,6 +2,14 @@
 
 This is a BPM mBaaS service for working with the REST API of JBoss BPM Suite V6.x (https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html).
 
+
+UPDATE 2017-04-21:
+Note that in order for the fh-connector-bpm to call the BPM REST API the user passed as BPM\_AUTH\_USERNAME needs to have the role 'rest-all' configured. See https://access.redhat.com/solutions/2146121
+
+Also note that BPM 6.4.0 requires EAP 6.4.11, otherwise this error might occur:
+https://access.redhat.com/solutions/2155931
+END OF UPDATE
+
 The following environment variables need to be defined to create a connection to your JBoss BPM Suite.
 Alternatively you can leave them empty and define a connection in your mobile App.
 But note! This mBaaS will always take the environment variables, if they are defined.
